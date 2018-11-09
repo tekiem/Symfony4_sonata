@@ -63,6 +63,7 @@ return array(
     'Symfony\\Bridge\\PhpUnit\\' => array($vendorDir . '/symfony/phpunit-bridge'),
     'Symfony\\Bridge\\Monolog\\' => array($vendorDir . '/symfony/monolog-bridge'),
     'Symfony\\Bridge\\Doctrine\\' => array($vendorDir . '/symfony/doctrine-bridge'),
+    'Sonata\\DoctrineORMAdminBundle\\' => array($vendorDir . '/sonata-project/doctrine-orm-admin-bundle/src'),
     'Sonata\\DatagridBundle\\' => array($vendorDir . '/sonata-project/datagrid-bundle/src'),
     'Sonata\\CoreBundle\\' => array($vendorDir . '/sonata-project/core-bundle/src'),
     'Sonata\\Cache\\' => array($vendorDir . '/sonata-project/cache/src'),

@@ -27,6 +27,7 @@
       <parameter key="SonataBlockBundle">Sonata\BlockBundle\SonataBlockBundle</parameter>
       <parameter key="KnpMenuBundle">Knp\Bundle\MenuBundle\KnpMenuBundle</parameter>
       <parameter key="SonataAdminBundle">Sonata\AdminBundle\SonataAdminBundle</parameter>
+      <parameter key="SonataDoctrineORMAdminBundle">Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -101,19 +102,23 @@
         <parameter key="path">C:\wamp64\www\mon_symfony_sonata\vendor\sonata-project\admin-bundle\src</parameter>
         <parameter key="namespace">Sonata\AdminBundle</parameter>
       </parameter>
+      <parameter key="SonataDoctrineORMAdminBundle" type="collection">
+        <parameter key="path">C:\wamp64\www\mon_symfony_sonata\vendor\sonata-project\doctrine-orm-admin-bundle\src</parameter>
+        <parameter key="namespace">Sonata\DoctrineORMAdminBundle</parameter>
+      </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">srcDevDebugProjectContainer</parameter>
     <parameter key="container.autowiring.strict_mode">true</parameter>
     <parameter key="container.dumper.inline_class_loader">true</parameter>
     <parameter key="env(DATABASE_URL)"></parameter>
-    <parameter key="locale">en</parameter>
+    <parameter key="locale">fr</parameter>
     <parameter key="fragment.renderer.hinclude.global_template"></parameter>
     <parameter key="fragment.path">/_fragment</parameter>
     <parameter key="kernel.secret">%env(APP_SECRET)%</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
-    <parameter key="kernel.default_locale">en</parameter>
+    <parameter key="kernel.default_locale">fr</parameter>
     <parameter key="templating.helper.code.file_link_format">null</parameter>
     <parameter key="debug.file_link_format">null</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
@@ -473,6 +478,60 @@
     <parameter key="sonata.admin.configuration.filters.persister">sonata.admin.filter_persister.session</parameter>
     <parameter key="sonata.admin.configuration.show.mosaic.button">true</parameter>
     <parameter key="sonata.admin.configuration.translate_group_label">false</parameter>
+    <parameter key="sonata.admin.manipulator.acl.object.orm.class">Sonata\DoctrineORMAdminBundle\Util\ObjectAclManipulator</parameter>
+    <parameter key="sonata_doctrine_orm_admin.entity_manager">null</parameter>
+    <parameter key="sonata_doctrine_orm_admin.templates" type="collection">
+      <parameter key="types" type="collection">
+        <parameter key="list" type="collection">
+          <parameter key="array">@SonataAdmin/CRUD/list_array.html.twig</parameter>
+          <parameter key="boolean">@SonataAdmin/CRUD/list_boolean.html.twig</parameter>
+          <parameter key="date">@SonataAdmin/CRUD/list_date.html.twig</parameter>
+          <parameter key="time">@SonataAdmin/CRUD/list_time.html.twig</parameter>
+          <parameter key="datetime">@SonataAdmin/CRUD/list_datetime.html.twig</parameter>
+          <parameter key="text">@SonataAdmin/CRUD/list_string.html.twig</parameter>
+          <parameter key="textarea">@SonataAdmin/CRUD/list_string.html.twig</parameter>
+          <parameter key="email">@SonataAdmin/CRUD/list_email.html.twig</parameter>
+          <parameter key="trans">@SonataAdmin/CRUD/list_trans.html.twig</parameter>
+          <parameter key="string">@SonataAdmin/CRUD/list_string.html.twig</parameter>
+          <parameter key="smallint">@SonataAdmin/CRUD/list_string.html.twig</parameter>
+          <parameter key="bigint">@SonataAdmin/CRUD/list_string.html.twig</parameter>
+          <parameter key="integer">@SonataAdmin/CRUD/list_string.html.twig</parameter>
+          <parameter key="decimal">@SonataAdmin/CRUD/list_string.html.twig</parameter>
+          <parameter key="identifier">@SonataAdmin/CRUD/list_string.html.twig</parameter>
+          <parameter key="currency">@SonataAdmin/CRUD/list_currency.html.twig</parameter>
+          <parameter key="percent">@SonataAdmin/CRUD/list_percent.html.twig</parameter>
+          <parameter key="choice">@SonataAdmin/CRUD/list_choice.html.twig</parameter>
+          <parameter key="url">@SonataAdmin/CRUD/list_url.html.twig</parameter>
+          <parameter key="html">@SonataAdmin/CRUD/list_html.html.twig</parameter>
+        </parameter>
+        <parameter key="show" type="collection">
+          <parameter key="array">@SonataAdmin/CRUD/show_array.html.twig</parameter>
+          <parameter key="boolean">@SonataAdmin/CRUD/show_boolean.html.twig</parameter>
+          <parameter key="date">@SonataAdmin/CRUD/show_date.html.twig</parameter>
+          <parameter key="time">@SonataAdmin/CRUD/show_time.html.twig</parameter>
+          <parameter key="datetime">@SonataAdmin/CRUD/show_datetime.html.twig</parameter>
+          <parameter key="text">@SonataAdmin/CRUD/base_show_field.html.twig</parameter>
+          <parameter key="email">@SonataAdmin/CRUD/show_email.html.twig</parameter>
+          <parameter key="trans">@SonataAdmin/CRUD/show_trans.html.twig</parameter>
+          <parameter key="string">@SonataAdmin/CRUD/base_show_field.html.twig</parameter>
+          <parameter key="smallint">@SonataAdmin/CRUD/base_show_field.html.twig</parameter>
+          <parameter key="bigint">@SonataAdmin/CRUD/base_show_field.html.twig</parameter>
+          <parameter key="integer">@SonataAdmin/CRUD/base_show_field.html.twig</parameter>
+          <parameter key="decimal">@SonataAdmin/CRUD/base_show_field.html.twig</parameter>
+          <parameter key="currency">@SonataAdmin/CRUD/show_currency.html.twig</parameter>
+          <parameter key="percent">@SonataAdmin/CRUD/show_percent.html.twig</parameter>
+          <parameter key="choice">@SonataAdmin/CRUD/show_choice.html.twig</parameter>
+          <parameter key="url">@SonataAdmin/CRUD/show_url.html.twig</parameter>
+          <parameter key="html">@SonataAdmin/CRUD/show_html.html.twig</parameter>
+        </parameter>
+      </parameter>
+      <parameter key="form" type="collection">
+        <parameter>@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig</parameter>
+      </parameter>
+      <parameter key="filter" type="collection">
+        <parameter>@SonataDoctrineORMAdmin/Form/filter_admin_fields.html.twig</parameter>
+      </parameter>
+    </parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -626,6 +685,180 @@
     <service id="EasyCorp\EasyLog\EasyLogHandler" class="EasyCorp\EasyLog\EasyLogHandler" public="false">
       <argument>C:\wamp64\www\mon_symfony_sonata\var\log/dev.log</argument>
     </service>
+    <service id="App\Admin\BlogPostAdmin" class="App\Admin\BlogPostAdmin" public="false" autowire="true" autoconfigure="true"/>
+    <service id="App\Admin\CategoryAdmin" class="App\Admin\CategoryAdmin" public="false" autowire="true" autoconfigure="true"/>
+    <service id="App\Repository\ArticlesRepository" class="App\Repository\ArticlesRepository" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\BlogPostRepository" class="App\Repository\BlogPostRepository" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\CategorieRepository" class="App\Repository\CategorieRepository" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="admin.category" class="App\Admin\CategoryAdmin" shared="false" public="true" autowire="true" autoconfigure="true">
+      <tag name="sonata.admin" manager_type="orm" label="Category"/>
+      <argument>admin.category</argument>
+      <argument>App\Entity\Category</argument>
+      <argument>Sonata\AdminBundle\Controller\CRUDController</argument>
+      <call method="setManagerType">
+        <argument>orm</argument>
+      </call>
+      <call method="setModelManager">
+        <argument type="service" id="sonata.admin.manager.orm"/>
+      </call>
+      <call method="setFormContractor">
+        <argument type="service" id="sonata.admin.builder.orm_form"/>
+      </call>
+      <call method="setShowBuilder">
+        <argument type="service" id="sonata.admin.builder.orm_show"/>
+      </call>
+      <call method="setListBuilder">
+        <argument type="service" id="sonata.admin.builder.orm_list"/>
+      </call>
+      <call method="setDatagridBuilder">
+        <argument type="service" id="sonata.admin.builder.orm_datagrid"/>
+      </call>
+      <call method="setTranslator">
+        <argument type="service" id="translator.data_collector"/>
+        <argument>false</argument>
+      </call>
+      <call method="setConfigurationPool">
+        <argument type="service" id="sonata.admin.pool"/>
+      </call>
+      <call method="setRouteGenerator">
+        <argument type="service" id="sonata.admin.route.default_generator"/>
+      </call>
+      <call method="setValidator">
+        <argument type="service" id="debug.validator"/>
+      </call>
+      <call method="setSecurityHandler">
+        <argument type="service" id="sonata.admin.security.handler.noop"/>
+      </call>
+      <call method="setMenuFactory">
+        <argument type="service" id="knp_menu.factory"/>
+      </call>
+      <call method="setRouteBuilder">
+        <argument type="service" id="sonata.admin.route.path_info"/>
+      </call>
+      <call method="setLabelTranslatorStrategy">
+        <argument type="service" id="sonata.admin.label.strategy.native"/>
+      </call>
+      <call method="setPagerType">
+        <argument>default</argument>
+      </call>
+      <call method="setLabel">
+        <argument>Category</argument>
+      </call>
+      <call method="showMosaicButton">
+        <argument>true</argument>
+      </call>
+      <call method="setTemplateRegistry">
+        <argument type="service" id="admin.category.template_registry"/>
+      </call>
+      <call method="setSecurityInformation">
+        <argument type="collection"/>
+      </call>
+      <call method="initialize"/>
+      <call method="addExtension">
+        <argument type="service" id="sonata.admin.event.extension"/>
+      </call>
+      <call method="setFormTheme">
+        <argument type="collection">
+          <argument>@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig</argument>
+        </argument>
+      </call>
+      <call method="setFilterTheme">
+        <argument type="collection">
+          <argument>@SonataDoctrineORMAdmin/Form/filter_admin_fields.html.twig</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="admin.blog_post" class="App\Admin\BlogPostAdmin" shared="false" public="true" autowire="true" autoconfigure="true">
+      <tag name="sonata.admin" manager_type="orm" label="Blog post"/>
+      <argument>admin.blog_post</argument>
+      <argument>App\Entity\BlogPost</argument>
+      <argument>Sonata\AdminBundle\Controller\CRUDController</argument>
+      <call method="setManagerType">
+        <argument>orm</argument>
+      </call>
+      <call method="setModelManager">
+        <argument type="service" id="sonata.admin.manager.orm"/>
+      </call>
+      <call method="setFormContractor">
+        <argument type="service" id="sonata.admin.builder.orm_form"/>
+      </call>
+      <call method="setShowBuilder">
+        <argument type="service" id="sonata.admin.builder.orm_show"/>
+      </call>
+      <call method="setListBuilder">
+        <argument type="service" id="sonata.admin.builder.orm_list"/>
+      </call>
+      <call method="setDatagridBuilder">
+        <argument type="service" id="sonata.admin.builder.orm_datagrid"/>
+      </call>
+      <call method="setTranslator">
+        <argument type="service" id="translator.data_collector"/>
+        <argument>false</argument>
+      </call>
+      <call method="setConfigurationPool">
+        <argument type="service" id="sonata.admin.pool"/>
+      </call>
+      <call method="setRouteGenerator">
+        <argument type="service" id="sonata.admin.route.default_generator"/>
+      </call>
+      <call method="setValidator">
+        <argument type="service" id="debug.validator"/>
+      </call>
+      <call method="setSecurityHandler">
+        <argument type="service" id="sonata.admin.security.handler.noop"/>
+      </call>
+      <call method="setMenuFactory">
+        <argument type="service" id="knp_menu.factory"/>
+      </call>
+      <call method="setRouteBuilder">
+        <argument type="service" id="sonata.admin.route.path_info"/>
+      </call>
+      <call method="setLabelTranslatorStrategy">
+        <argument type="service" id="sonata.admin.label.strategy.native"/>
+      </call>
+      <call method="setPagerType">
+        <argument>default</argument>
+      </call>
+      <call method="setLabel">
+        <argument>Blog post</argument>
+      </call>
+      <call method="showMosaicButton">
+        <argument>true</argument>
+      </call>
+      <call method="setTemplateRegistry">
+        <argument type="service" id="admin.blog_post.template_registry"/>
+      </call>
+      <call method="setSecurityInformation">
+        <argument type="collection"/>
+      </call>
+      <call method="initialize"/>
+      <call method="addExtension">
+        <argument type="service" id="sonata.admin.event.extension"/>
+      </call>
+      <call method="setFormTheme">
+        <argument type="collection">
+          <argument>@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig</argument>
+        </argument>
+      </call>
+      <call method="setFilterTheme">
+        <argument type="collection">
+          <argument>@SonataDoctrineORMAdmin/Form/filter_admin_fields.html.twig</argument>
+        </argument>
+      </call>
+    </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -645,7 +878,7 @@
       <tag name="container.hot_path"/>
       <tag name="container.hot_path"/>
       <argument type="service" id="request_stack"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="service" id="router.default" on-invalid="ignore"/>
     </service>
     <service id="validate_request_listener" class="Symfony\Component\HttpKernel\EventListener\ValidateRequestListener" public="false">
@@ -842,7 +1075,7 @@
       <argument type="service" id="translation.writer"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument>C:\wamp64\www\mon_symfony_sonata/translations</argument>
       <argument>C:\wamp64\www\mon_symfony_sonata/templates</argument>
       <call method="setName">
@@ -1302,7 +1535,7 @@
     <service id="translator.default" class="Symfony\Bundle\FrameworkBundle\Translation\Translator" public="false">
       <argument type="service" id=".service_locator.yQVjGlt"/>
       <argument type="service" id="translator.formatter.default"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="collection">
         <argument key="translation.loader.php" type="collection">
           <argument>php</argument>
@@ -1690,8 +1923,8 @@
       </call>
       <call method="setFallbackLocales">
         <argument type="collection">
-          <argument>en</argument>
-          <argument>en</argument>
+          <argument>fr</argument>
+          <argument>fr</argument>
         </argument>
       </call>
     </service>
@@ -2273,14 +2506,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -3004,11 +3229,11 @@
       <argument type="collection">
         <argument key="driver">pdo_mysql</argument>
         <argument key="charset">utf8mb4</argument>
-        <argument key="url">%env(resolve:DATABASE_URL)%</argument>
+        <argument key="user">%env(DATABASE_USER)%</argument>
+        <argument key="password">%env(DATABASE_PWD)%</argument>
+        <argument key="dbname">%env(DATABASE_NAME)%</argument>
         <argument key="host">localhost</argument>
         <argument key="port">null</argument>
-        <argument key="user">root</argument>
-        <argument key="password">null</argument>
         <argument key="driverOptions" type="collection"/>
         <argument key="serverVersion">5.7</argument>
         <argument key="defaultTableOptions" type="collection">
@@ -3039,7 +3264,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.9_yeNH1"/>
+      <argument type="service" id=".service_locator.WtYWDck"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4244,6 +4469,14 @@
         <argument>!SonataAdmin</argument>
       </call>
       <call method="addPath">
+        <argument>C:\wamp64\www\mon_symfony_sonata\vendor\sonata-project\doctrine-orm-admin-bundle\src/Resources/views</argument>
+        <argument>SonataDoctrineORMAdmin</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\mon_symfony_sonata\vendor\sonata-project\doctrine-orm-admin-bundle\src/Resources/views</argument>
+        <argument>!SonataDoctrineORMAdmin</argument>
+      </call>
+      <call method="addPath">
         <argument>C:\wamp64\www\mon_symfony_sonata/templates</argument>
       </call>
       <call method="addPath">
@@ -5157,19 +5390,57 @@
         <argument type="service" id="sonata.admin.global_template_registry"/>
       </call>
       <call method="setAdminServiceIds">
-        <argument type="collection"/>
+        <argument type="collection">
+          <argument>admin.category</argument>
+          <argument>admin.blog_post</argument>
+        </argument>
       </call>
       <call method="setAdminGroups">
-        <argument type="collection"/>
+        <argument type="collection">
+          <argument key="default" type="collection">
+            <argument key="label">default</argument>
+            <argument key="label_catalogue">SonataAdminBundle</argument>
+            <argument key="icon">&lt;i class="fa fa-folder"&gt;&lt;/i&gt;</argument>
+            <argument key="roles" type="collection"/>
+            <argument key="on_top">false</argument>
+            <argument key="keep_open">false</argument>
+            <argument key="items" type="collection">
+              <argument type="collection">
+                <argument key="admin">admin.category</argument>
+                <argument key="label">Category</argument>
+                <argument key="route"></argument>
+                <argument key="route_params" type="collection"/>
+                <argument key="route_absolute">false</argument>
+              </argument>
+              <argument type="collection">
+                <argument key="admin">admin.blog_post</argument>
+                <argument key="label">Blog post</argument>
+                <argument key="route"></argument>
+                <argument key="route_params" type="collection"/>
+                <argument key="route_absolute">false</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
       </call>
       <call method="setAdminClasses">
-        <argument type="collection"/>
+        <argument type="collection">
+          <argument key="App\Entity\Category" type="collection">
+            <argument>admin.category</argument>
+          </argument>
+          <argument key="App\Entity\BlogPost" type="collection">
+            <argument>admin.blog_post</argument>
+          </argument>
+        </argument>
       </call>
     </service>
     <service id="sonata.admin.route_loader" class="Sonata\AdminBundle\Route\AdminPoolLoader" public="true">
       <tag name="routing.loader"/>
       <argument type="service" id="sonata.admin.pool"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument>admin.category</argument>
+        <argument>admin.blog_post</argument>
+      </argument>
       <argument type="service" id="service_container"/>
     </service>
     <service id="sonata.admin.helper" class="Sonata\AdminBundle\Admin\AdminHelper" public="true">
@@ -5177,7 +5448,34 @@
     </service>
     <service id="sonata.admin.builder.filter.factory" class="Sonata\AdminBundle\Filter\FilterFactory" public="true">
       <argument type="service" id="service_container"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\BooleanFilter">sonata.admin.orm.filter.type.boolean</argument>
+        <argument key="doctrine_orm_boolean">sonata.admin.orm.filter.type.boolean</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\CallbackFilter">sonata.admin.orm.filter.type.callback</argument>
+        <argument key="doctrine_orm_callback">sonata.admin.orm.filter.type.callback</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\ChoiceFilter">sonata.admin.orm.filter.type.choice</argument>
+        <argument key="doctrine_orm_choice">sonata.admin.orm.filter.type.choice</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\ModelFilter">sonata.admin.orm.filter.type.model</argument>
+        <argument key="doctrine_orm_model">sonata.admin.orm.filter.type.model</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\ModelAutocompleteFilter">sonata.admin.orm.filter.type.model_autocomplete</argument>
+        <argument key="doctrine_orm_model_autocomplete">sonata.admin.orm.filter.type.model_autocomplete</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\StringFilter">sonata.admin.orm.filter.type.string</argument>
+        <argument key="doctrine_orm_string">sonata.admin.orm.filter.type.string</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\NumberFilter">sonata.admin.orm.filter.type.number</argument>
+        <argument key="doctrine_orm_number">sonata.admin.orm.filter.type.number</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\DateFilter">sonata.admin.orm.filter.type.date</argument>
+        <argument key="doctrine_orm_date">sonata.admin.orm.filter.type.date</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\DateRangeFilter">sonata.admin.orm.filter.type.date_range</argument>
+        <argument key="doctrine_orm_date_range">sonata.admin.orm.filter.type.date_range</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\DateTimeFilter">sonata.admin.orm.filter.type.datetime</argument>
+        <argument key="doctrine_orm_datetime">sonata.admin.orm.filter.type.datetime</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\TimeFilter">sonata.admin.orm.filter.type.time</argument>
+        <argument key="doctrine_orm_time">sonata.admin.orm.filter.type.time</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\DateTimeRangeFilter">sonata.admin.orm.filter.type.datetime_range</argument>
+        <argument key="doctrine_orm_datetime_range">sonata.admin.orm.filter.type.datetime_range</argument>
+        <argument key="Sonata\DoctrineORMAdminBundle\Filter\ClassFilter">sonata.admin.orm.filter.type.class</argument>
+        <argument key="doctrine_orm_class">sonata.admin.orm.filter.type.class</argument>
+      </argument>
     </service>
     <service id="sonata.admin.breadcrumbs_builder" class="Sonata\AdminBundle\Admin\BreadcrumbsBuilder" public="true">
       <argument>%sonata.admin.configuration.breadcrumbs%</argument>
@@ -5482,7 +5780,13 @@
     <service id="sonata.admin.maker" class="Sonata\AdminBundle\Maker\AdminMaker" public="false">
       <tag name="maker.command"/>
       <argument>C:\wamp64\www\mon_symfony_sonata</argument>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="sonata.admin.manager.orm" type="service">
+          <service class="Sonata\DoctrineORMAdminBundle\Model\ModelManager" public="true">
+            <argument type="service" id="doctrine"/>
+          </service>
+        </argument>
+      </argument>
     </service>
     <service id="sonata.admin.security.handler.noop" class="Sonata\AdminBundle\Security\Handler\NoopSecurityHandler" public="false"/>
     <service id="sonata.admin.security.handler.role" class="Sonata\AdminBundle\Security\Handler\RoleSecurityHandler" public="false">
@@ -5513,6 +5817,142 @@
       <argument type="service" id="form.factory"/>
       <argument>Sonata\AdminBundle\Security\Acl\Permission\MaskBuilder</argument>
     </service>
+    <service id="sonata.admin.entity_manager" class="Doctrine\ORM\EntityManager" public="false">
+      <argument>null</argument>
+      <factory service="doctrine" method="getManager"/>
+    </service>
+    <service id="sonata.admin.manager.orm" class="Sonata\DoctrineORMAdminBundle\Model\ModelManager" public="true">
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="sonata.admin.builder.orm_form" class="Sonata\DoctrineORMAdminBundle\Builder\FormContractor">
+      <argument type="service" id="form.factory"/>
+    </service>
+    <service id="sonata.admin.builder.orm_list" class="Sonata\DoctrineORMAdminBundle\Builder\ListBuilder">
+      <argument type="service" id="sonata.admin.guesser.orm_list_chain"/>
+      <argument type="collection">
+        <argument key="array">@SonataAdmin/CRUD/list_array.html.twig</argument>
+        <argument key="boolean">@SonataAdmin/CRUD/list_boolean.html.twig</argument>
+        <argument key="date">@SonataAdmin/CRUD/list_date.html.twig</argument>
+        <argument key="time">@SonataAdmin/CRUD/list_time.html.twig</argument>
+        <argument key="datetime">@SonataAdmin/CRUD/list_datetime.html.twig</argument>
+        <argument key="text">@SonataAdmin/CRUD/list_string.html.twig</argument>
+        <argument key="textarea">@SonataAdmin/CRUD/list_string.html.twig</argument>
+        <argument key="email">@SonataAdmin/CRUD/list_email.html.twig</argument>
+        <argument key="trans">@SonataAdmin/CRUD/list_trans.html.twig</argument>
+        <argument key="string">@SonataAdmin/CRUD/list_string.html.twig</argument>
+        <argument key="smallint">@SonataAdmin/CRUD/list_string.html.twig</argument>
+        <argument key="bigint">@SonataAdmin/CRUD/list_string.html.twig</argument>
+        <argument key="integer">@SonataAdmin/CRUD/list_string.html.twig</argument>
+        <argument key="decimal">@SonataAdmin/CRUD/list_string.html.twig</argument>
+        <argument key="identifier">@SonataAdmin/CRUD/list_string.html.twig</argument>
+        <argument key="currency">@SonataAdmin/CRUD/list_currency.html.twig</argument>
+        <argument key="percent">@SonataAdmin/CRUD/list_percent.html.twig</argument>
+        <argument key="choice">@SonataAdmin/CRUD/list_choice.html.twig</argument>
+        <argument key="url">@SonataAdmin/CRUD/list_url.html.twig</argument>
+        <argument key="html">@SonataAdmin/CRUD/list_html.html.twig</argument>
+      </argument>
+    </service>
+    <service id="sonata.admin.guesser.orm_list" class="Sonata\DoctrineORMAdminBundle\Guesser\TypeGuesser">
+      <tag name="sonata.admin.guesser.orm_list"/>
+    </service>
+    <service id="sonata.admin.guesser.orm_list_chain" class="Sonata\AdminBundle\Guesser\TypeGuesserChain">
+      <argument type="collection">
+        <argument type="service" id="sonata.admin.guesser.orm_list"/>
+      </argument>
+    </service>
+    <service id="sonata.admin.builder.orm_show" class="Sonata\DoctrineORMAdminBundle\Builder\ShowBuilder">
+      <argument type="service" id="sonata.admin.guesser.orm_show_chain"/>
+      <argument type="collection">
+        <argument key="array">@SonataAdmin/CRUD/show_array.html.twig</argument>
+        <argument key="boolean">@SonataAdmin/CRUD/show_boolean.html.twig</argument>
+        <argument key="date">@SonataAdmin/CRUD/show_date.html.twig</argument>
+        <argument key="time">@SonataAdmin/CRUD/show_time.html.twig</argument>
+        <argument key="datetime">@SonataAdmin/CRUD/show_datetime.html.twig</argument>
+        <argument key="text">@SonataAdmin/CRUD/base_show_field.html.twig</argument>
+        <argument key="email">@SonataAdmin/CRUD/show_email.html.twig</argument>
+        <argument key="trans">@SonataAdmin/CRUD/show_trans.html.twig</argument>
+        <argument key="string">@SonataAdmin/CRUD/base_show_field.html.twig</argument>
+        <argument key="smallint">@SonataAdmin/CRUD/base_show_field.html.twig</argument>
+        <argument key="bigint">@SonataAdmin/CRUD/base_show_field.html.twig</argument>
+        <argument key="integer">@SonataAdmin/CRUD/base_show_field.html.twig</argument>
+        <argument key="decimal">@SonataAdmin/CRUD/base_show_field.html.twig</argument>
+        <argument key="currency">@SonataAdmin/CRUD/show_currency.html.twig</argument>
+        <argument key="percent">@SonataAdmin/CRUD/show_percent.html.twig</argument>
+        <argument key="choice">@SonataAdmin/CRUD/show_choice.html.twig</argument>
+        <argument key="url">@SonataAdmin/CRUD/show_url.html.twig</argument>
+        <argument key="html">@SonataAdmin/CRUD/show_html.html.twig</argument>
+      </argument>
+    </service>
+    <service id="sonata.admin.guesser.orm_show" class="Sonata\DoctrineORMAdminBundle\Guesser\TypeGuesser">
+      <tag name="sonata.admin.guesser.orm_show"/>
+    </service>
+    <service id="sonata.admin.guesser.orm_show_chain" class="Sonata\AdminBundle\Guesser\TypeGuesserChain">
+      <argument type="collection">
+        <argument type="service" id="sonata.admin.guesser.orm_show"/>
+      </argument>
+    </service>
+    <service id="sonata.admin.builder.orm_datagrid" class="Sonata\DoctrineORMAdminBundle\Builder\DatagridBuilder">
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="sonata.admin.builder.filter.factory"/>
+      <argument type="service" id="sonata.admin.guesser.orm_datagrid_chain"/>
+      <argument>true</argument>
+    </service>
+    <service id="sonata.admin.guesser.orm_datagrid" class="Sonata\DoctrineORMAdminBundle\Guesser\FilterTypeGuesser">
+      <tag name="sonata.admin.guesser.orm_datagrid"/>
+    </service>
+    <service id="sonata.admin.guesser.orm_datagrid_chain" class="Sonata\AdminBundle\Guesser\TypeGuesserChain">
+      <argument type="collection">
+        <argument type="service" id="sonata.admin.guesser.orm_datagrid"/>
+      </argument>
+    </service>
+    <service id="sonata.admin.orm.filter.type.boolean" class="Sonata\DoctrineORMAdminBundle\Filter\BooleanFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_boolean"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.callback" class="Sonata\DoctrineORMAdminBundle\Filter\CallbackFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_callback"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.choice" class="Sonata\DoctrineORMAdminBundle\Filter\ChoiceFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_choice"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.model" class="Sonata\DoctrineORMAdminBundle\Filter\ModelFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_model"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.model_autocomplete" class="Sonata\DoctrineORMAdminBundle\Filter\ModelAutocompleteFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_model_autocomplete"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.string" class="Sonata\DoctrineORMAdminBundle\Filter\StringFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_string"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.number" class="Sonata\DoctrineORMAdminBundle\Filter\NumberFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_number"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.date" class="Sonata\DoctrineORMAdminBundle\Filter\DateFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_date"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.date_range" class="Sonata\DoctrineORMAdminBundle\Filter\DateRangeFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_date_range"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.datetime" class="Sonata\DoctrineORMAdminBundle\Filter\DateTimeFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_datetime"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.time" class="Sonata\DoctrineORMAdminBundle\Filter\TimeFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_time"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.datetime_range" class="Sonata\DoctrineORMAdminBundle\Filter\DateTimeRangeFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_datetime_range"/>
+    </service>
+    <service id="sonata.admin.orm.filter.type.class" class="Sonata\DoctrineORMAdminBundle\Filter\ClassFilter" shared="false" public="true">
+      <tag name="sonata.admin.filter.type" alias="doctrine_orm_class"/>
+    </service>
+    <service id="sonata.admin.manipulator.acl.object.orm" class="Sonata\DoctrineORMAdminBundle\Util\ObjectAclManipulator" public="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ArticlesRepository" class="App\Repository\ArticlesRepository" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ArticlesRepository" class="App\Repository\ArticlesRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\BlogPostRepository" class="App\Repository\BlogPostRepository" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\BlogPostRepository" class="App\Repository\BlogPostRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CategorieRepository" class="App\Repository\CategorieRepository" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\CategorieRepository" class="App\Repository\CategorieRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="maker.auto_command.make_auth" class="Symfony\Bundle\MakerBundle\Command\MakerCommand" public="false">
       <tag name="console.command" command="make:auth"/>
       <argument type="service" id="maker.maker.make_authenticator"/>
@@ -5765,6 +6205,15 @@
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
       </argument>
     </service>
+    <service id=".service_locator.WtYWDck" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Repository\ArticlesRepository" type="service" id="App\Repository\ArticlesRepository"/>
+        <argument key="App\Repository\BlogPostRepository" type="service" id="App\Repository\BlogPostRepository"/>
+        <argument key="App\Repository\CategorieRepository" type="service" id="App\Repository\CategorieRepository"/>
+        <argument key="App\Repository\CategoryRepository" type="service" id="App\Repository\CategoryRepository"/>
+      </argument>
+    </service>
     <service id="security.logout.handler.csrf_token_clearing" class="Symfony\Component\Security\Http\Logout\CsrfTokenClearingLogoutHandler" public="false">
       <argument type="service" id="security.csrf.token_storage"/>
     </service>
@@ -5898,6 +6347,14 @@
         <argument key="list" type="service" id="knp_menu.renderer.list"/>
         <argument key="twig" type="service" id="knp_menu.renderer.twig"/>
       </argument>
+    </service>
+    <service id="admin.category.template_registry" class="Sonata\AdminBundle\Templating\TemplateRegistry" public="true">
+      <tag name="sonata.admin.template_registry"/>
+      <argument>%sonata.admin.configuration.templates%</argument>
+    </service>
+    <service id="admin.blog_post.template_registry" class="Sonata\AdminBundle\Templating\TemplateRegistry" public="true">
+      <tag name="sonata.admin.template_registry"/>
+      <argument>%sonata.admin.configuration.templates%</argument>
     </service>
     <service id="debug.validator.inner" class="Symfony\Component\Validator\Validator\ValidatorInterface" public="false">
       <factory service="validator.builder" method="getValidator"/>

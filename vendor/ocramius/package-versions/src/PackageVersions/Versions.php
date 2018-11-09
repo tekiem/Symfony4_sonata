@@ -51,6 +51,7 @@ final class Versions
   'sonata-project/cache' => '2.0.1@2e2fdabf40bfe566c68406aae238a721cddabf74',
   'sonata-project/core-bundle' => '3.11.2@16a89c9dd5f99a3308b992bc5dcc14e16cbdf797',
   'sonata-project/datagrid-bundle' => '2.4.0@aa0923768b705dbdab6b751f667a03ba6c5fd05a',
+  'sonata-project/doctrine-orm-admin-bundle' => '3.6.3@5cd7b12e13ceadeb62edc170b067bc10c26d5896',
   'sonata-project/exporter' => '1.9.1@6dbea3379447f672f46fccd7e29210cc1246aea9',
   'swiftmailer/swiftmailer' => 'v6.1.3@8ddcb66ac10c392d3beb54829eef8ac1438595f4',
   'symfony/asset' => 'v4.1.7@7bec13dad0df8146ee6ba9350203fcc832814bfe',
@@ -118,13 +119,13 @@ final class Versions
   'symfony/phpunit-bridge' => 'v4.1.7@2474c5d4a5e3431fee2f6f0dddde9d34983d9ceb',
   'symfony/test-pack' => 'v1.0.4@94d1c2b02f137201cd6a68d290caa38fe3817cba',
   'symfony/web-server-bundle' => 'v4.1.7@078117570d2f2d2bed104a667d4f783b19574d9d',
-  'paragonie/random_compat' => '2.*@',
-  'symfony/polyfill-ctype' => '*@',
-  'symfony/polyfill-iconv' => '*@',
-  'symfony/polyfill-php71' => '*@',
-  'symfony/polyfill-php70' => '*@',
-  'symfony/polyfill-php56' => '*@',
-  '__root__' => 'No version set (parsed as 1.0.0)@',
+  'paragonie/random_compat' => '2.*@6c0d7b701a0c156c83ec12a0bd3f836cc4847d8b',
+  'symfony/polyfill-ctype' => '*@6c0d7b701a0c156c83ec12a0bd3f836cc4847d8b',
+  'symfony/polyfill-iconv' => '*@6c0d7b701a0c156c83ec12a0bd3f836cc4847d8b',
+  'symfony/polyfill-php71' => '*@6c0d7b701a0c156c83ec12a0bd3f836cc4847d8b',
+  'symfony/polyfill-php70' => '*@6c0d7b701a0c156c83ec12a0bd3f836cc4847d8b',
+  'symfony/polyfill-php56' => '*@6c0d7b701a0c156c83ec12a0bd3f836cc4847d8b',
+  '__root__' => 'dev-master@6c0d7b701a0c156c83ec12a0bd3f836cc4847d8b',
 );
 
     private function __construct()

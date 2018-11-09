@@ -88,6 +88,7 @@ class ComposerStaticInitae1d39dd1278bc948e7f0b6268a350fb
             'Symfony\\Bridge\\PhpUnit\\' => 23,
             'Symfony\\Bridge\\Monolog\\' => 23,
             'Symfony\\Bridge\\Doctrine\\' => 24,
+            'Sonata\\DoctrineORMAdminBundle\\' => 30,
             'Sonata\\DatagridBundle\\' => 22,
             'Sonata\\CoreBundle\\' => 18,
             'Sonata\\Cache\\' => 13,
@@ -380,6 +381,10 @@ class ComposerStaticInitae1d39dd1278bc948e7f0b6268a350fb
         'Symfony\\Bridge\\Doctrine\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/doctrine-bridge',
+        ),
+        'Sonata\\DoctrineORMAdminBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/doctrine-orm-admin-bundle/src',
         ),
         'Sonata\\DatagridBundle\\' => 
         array (
